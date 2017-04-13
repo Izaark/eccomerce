@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
     <!-- Styles -->
     <link href="{{ url('/css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="public/css/table.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
