@@ -8,7 +8,7 @@
 <div class="big-padding text-center blue-grey white-text">
 <h1>Productos</h1>
 </div>
-	<div class="container">
+	<div class="container white">
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -31,6 +31,10 @@
 			@endforeach
 		</body>
 	</table>
+		
+	</div>
+	<div class="floating">
+		<a href="{{url('/products/create')}}" class="btn btn-primary btn-fab"><i class="material-icons">add</i></a>
 		
 	</div>
 @endsection

@@ -8,8 +8,18 @@ margin-bottom: 0px;
 	padding: 30px;
 }
 .blue-grey{
-	background-color: grey;
+	background-color:#424242;
+}
+.white{
+	background-color: white;
 }
 .white-text{
 	color:white;
+}
+
+.floating{
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	z-index: 100;
 }
