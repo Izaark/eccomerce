@@ -64,7 +64,9 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+         $product = Product::find("$id");
+         return view('products.show', ['product' => $product]);
+         
     }
 
     /**
@@ -93,7 +95,6 @@ class ProductsController extends Controller
         $product->title = $request->title;
         $product->descriptions = $request->descriptions;
         $product->pricing = $request->pricing;
-   ;
 
         if ($product->save()) {
             return redirect("/products");
@@ -112,5 +113,8 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+        Product::destroy($id);
+        return redirect("/products");
+
     }
 }

@@ -2,11 +2,21 @@ body{
 	background-color: #F2F2F2;
 }
 .navbar{
-margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 .big-padding{
 	padding: 30px;
 }
+.no-padding{
+	padding:0px;
+}
+.no-margin{
+	margin: 0px;
+}
+.no-transform{
+	text-transform: none;
+}
+
 .blue-grey{
 	background-color:#424242;
 }
@@ -16,10 +26,34 @@ margin-bottom: 0px;
 .white-text{
 	color:white;
 }
-
+.red-text{
+	color:red;
+}
+.inline-block{
+	display: inline-block;
+}
+.absolute{
+	position: absolute;
+}
 .floating{
 	position: fixed;
 	bottom: 2em;
 	right: 2em;
 	z-index: 100;
+}
+
+.product{
+	width: 600px;
+	max-width: 100%;
+	padding: 1em;
+	position: relative;
+	
+}
+h3{
+	padding-bottom: 10px;
+	border-bottom: solid 1px;
+	}
+.actionse{
+right: 1em;
+top: 30px;
 }
