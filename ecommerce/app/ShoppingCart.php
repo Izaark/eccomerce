@@ -9,9 +9,16 @@ class ShoppingCart extends Model
     // mass assigment
     protected $fillable = ["status"];
 
-    //this function isn't static so, don't is call from your class
+    public function inShoppingCart(){
+        return $this->hasMany("App\InShoppingCart");
+    }
+    public function products(){
+        return $this->belongsToMany("App\Product","in_shopping_carts");    
+    }
+    
+    //this function isn't static so, do call from your class
     public function productsSize(){
-        return $this->id;
+        return $this->products()->count();
     }
 
     public static function findOrCreateBySessionID($shopping_cart_id)
