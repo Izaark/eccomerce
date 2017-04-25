@@ -6,30 +6,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class ShoppingCart extends Model
 {
-	// mass assigment
+    // mass assigment
     protected $fillable = ["status"];
 
     //this function isn't static so, don't is call from your class
     public function productsSize(){
-    	return $this->id;
+        return $this->id;
     }
 
     public static function findOrCreateBySessionID($shopping_cart_id)
     {
-    	if ($shopping_cart_id)
-    		return ShoppingCart::findBySession($shopping_cart_id);
-    	
-    	else
-    		return ShoppingCart::createWhithoutSession();
+        if ($shopping_cart_id)
+            //Busca el carrito con este id
+            return ShoppingCart::findBySession($shopping_cart_id);
+        
+        else
+            // la primera vez que entre da else, ya que es null
+            return ShoppingCart::createWhithoutSession();
     }
 
-    	public static function findBySession($shopping_cart_id){
+        public static function findBySession($shopping_cart_id){
 
-    		return ShoppingCart::find($shopping_cart_id);
-    	}
-    	public static function createWhithoutSession(){
+            return ShoppingCart::find($shopping_cart_id);
+        }
+        public static function createWhithoutSession(){
 
-    		return ShoppingCart::create(["status" => "incompleted"]);
-    	}
+            return ShoppingCart::create(["status" => "incompleted"]);
+        }
     
 }
